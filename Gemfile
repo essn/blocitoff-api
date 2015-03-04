@@ -7,6 +7,10 @@ gem 'rails-api'
 
 gem 'pg'
 
+gem 'devise_token_auth'
+
+gem 'omniauth'
+
 group :development do  
   gem 'spring'
 
