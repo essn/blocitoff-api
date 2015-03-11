@@ -22,6 +22,27 @@ module BlocitoffApi
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.middleware.use ActionDispatch::Flash
+    # config.middleware.use ActionDispatch::Flash
+    config.middleware.insert_before 0, "Rack::Cors" do
+       allow do
+         origins '*'
+         resource '*', headers: :any, methods: [:get, :post, :delete, :options]
+       end
+    end
   end
 end
+
+
+# module YourApp
+#   class Application < Rails::Application
+#     config.middleware.use Rack::Cors do
+#       allow do
+#         origins '*'
+#         resource '*',
+#           :headers => :any,
+#           :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+#           :methods => [:get, :post, :options, :delete, :put]
+#       end
+#     end
+#   end
+# end

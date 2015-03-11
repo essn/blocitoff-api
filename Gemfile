@@ -11,6 +11,8 @@ gem 'devise_token_auth'
 
 gem 'omniauth'
 
+gem 'rack-cors'
+
 group :development do  
   gem 'spring'
 
