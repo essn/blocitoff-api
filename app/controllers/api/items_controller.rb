@@ -23,6 +23,10 @@ class Api::ItemsController < ApplicationController
     end
   end
 
+  def current_user
+    render json: user_signed_in?
+  end
+
   private
 
   def item_params

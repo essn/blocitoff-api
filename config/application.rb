@@ -29,7 +29,13 @@ module BlocitoffApi
          resource '*', headers: :any, methods: [:get, :post, :delete, :options]
        end
     end
+
+    # Enable Cookies Store
+    config.api_only = false
   end
+
+    
+    
 end
 
 

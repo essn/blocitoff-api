@@ -12,6 +12,7 @@ test_user = User.new(
 )
 
 test_user.save
+test_user.skip_confirmation!
 
 5.times do |num = 1|
   Item.create!(

@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     resources :users do
       resources :items, only: [:index, :show, :create]
     end
+
+    get '/items/current_user', to: 'items#current_user'
   end
 end
