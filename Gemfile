@@ -13,6 +13,8 @@ gem 'omniauth'
 
 gem 'rack-cors'
 
+gem 'figaro'
+
 group :development do  
   gem 'spring'
 

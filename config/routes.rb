@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'api/auth'
+  devise_for :users
 
   namespace :api do
+    mount_devise_token_auth_for 'User', at: 'auth'
     resources :users do
-      resources :items, only: [:index, :show, :create]
+      resources :items, only: [:index, :show, :create, :destroy]
     end
-
-    get '/items/current_user', to: 'items#current_user'
   end
 end
