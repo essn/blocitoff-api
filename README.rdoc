@@ -1,8 +1,0 @@
-== README
-
-Todo
-
-- Configure CORS to properly work in production
-- Configure mailer
-- Beef out alerts
-
